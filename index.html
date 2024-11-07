@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i> 
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Music Producer- DJ- Film Score Writer</p>
+            <h1><span>TH.STE</span><br></h1>
+        </div>
+    </div>
+</div>
+<!-- ---------about---------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/thste.jpg" alt="Profile Image">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am an Irish music producer and score writer based between London and Ireland. I studied musci production in Pulse College Dublin. Here I got to use the facilities in Windmill Lane Studios daily. I specilized in electronic music production and film scoring. Since leaving college, I have made multiple electronic songs as well as scoring a short film called "Mira Talks". I am also very competant at recording and mixing live instruments and vocalists with examples shown below on this page. I also have 4 years experience working with live sound on events. These events range from small corporate jobs to big events such as festivals like Glastonbury and Forbidden Fruit. I did this through comapnies such as Acoustik (Bray, Ireland), Dobson Sound (Wimbledon, London) and Showforce (London, England).</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Sound Engineering</span><br>Providing live sound for events</li>
+                        <li><span>DJ</span><br>DJ for house parties and events. Generally House music DJ</li>
+                        <li><span>Music Production</span><br>Includes fully electronic and fully acoustic pieces</li>
+                        <li><span>Film Scoring</span><br>Scoring short films and full-length feature films</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current</span><br>Working on Events as a freelancer</li>
+                        <li><span>2022 - 2023</span><br> Sound Engineer for Dobson Sound LTD</li>
+                        <li><span>2018 - 2019</span><br>Sound Engineer for Acoustik </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016</span><br>B.A. in Music Production, Griffith College Dublin</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Music Production</h2>
+                <p>Available to work on songs as an engineer or producer. </p>
+                <a href="#contact">Bookings</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Film and advert scoring </h2>
+                <p>Available to write film scores.</p>
+                <a href="#contact">Bookings</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Dj</h2>
+                <p>Available to DJ.</p>
+                <a href="#contact">Bookings</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ----------portfolio------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/Eilishpic.jpg">
+                <div class="layer">
+                    <h3>House Music Tracks</h3>
+                    <p> Click for a link to my Soundcloud page, where all of the house music that I have made is available to download or listen to. </p>
+                    <a href="https://soundcloud.com/horseman2" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+               <img src="images/Jaxson.png">
+               <div class="layer">
+                <h3>Acoustic Engineering and Production work</h3>
+                <p>Follow the link to see a video where I worked as an engineer and producer on a project for the talented Jaxson </p>
+                <a href="https://www.youtube.com/watch?v=ZmXw7pQXCvA&t=21s" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                </div>
+                <div class="work">
+                    <video src="images/MiraTalksCredits.mp4" controls>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-- ----------contact------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> slyne234@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i> +353879527470</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/stephen.lyne.12/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/slyne234"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/th_ste62/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/stephen-lyne-a07414193/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/Stephen Lyne's CV.docx" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form id="contactForm" action="contact.php" method="POST" onsubmit="return submitForm(event)">
+                    <input type="text" id="name" name="Name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="Email" placeholder="Your Email" required>
+                    <textarea id="message" name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Stephen.</p>
+    </div>
+</div>
+<!-- JavaScript for contact menu -->
+<script>
+   <script>
+    function submitForm(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get form field values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Create FormData object
+        const formData = new FormData();
+        formData.append("Name", name);
+        formData.append("Email", email);
+        formData.append("Message", message);
+
+        // Send data to PHP script
+        fetch('contact.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+            // Display success message
+            document.getElementById("msg").textContent = "Form submitted successfully!";
+            document.getElementById("contactForm").reset(); // Clear the form
+        })
+        //Display error message
+        .catch(error => {
+            console.error('Error:', error);
+            document.getElementById("msg").textContent = "There was an error sending your message.";
+        });
+    }
+</script>
+<script>
+    function opentab(tabName) {
+        const contents = document.querySelectorAll('.tab-contents');
+        const links = document.querySelectorAll('.tab-links');
+        
+        contents.forEach(content => {
+            content.classList.remove('active-tab');
+        });
+        links.forEach(link => {
+            link.classList.remove('active-link');
+        });
+
+        // Show the clicked tab's content and activate its link
+        document.getElementById(tabName).classList.add('active-tab');
+        const activeLink = [...links].find(link => link.textContent.toLowerCase() === tabName);
+        if (activeLink) {
+            activeLink.classList.add('active-link');
+        }
+    }
+</script>
+
+</script>
+</body>
+</html>
