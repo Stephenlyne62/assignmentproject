@@ -23,9 +23,9 @@
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()" aria-label="Close menu"></i>
+                    <i class="fas fa-times" onclick="closeMenu()" aria-label="Close menu"></i>
                 </ul>
-                <i class="fas fa-bars" onclick="openmenu()" aria-label="Open menu"></i>
+                <i class="fas fa-bars" onclick="openMenu()" aria-label="Open menu"></i>
             </nav>
             <div class="header-text">
                 <p>Music Producer - DJ - Film Score Writer</p>
@@ -43,30 +43,30 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>I am an Irish music producer and score writer based between London and Ireland. I studied music production in Pulse College Dublin, where I had access to the facilities at Windmill Lane Studios. I specialize in electronic music production and film scoring. After leaving college, I have produced multiple electronic tracks and scored a short film called "Mira Talks." Additionally, I am experienced in recording and mixing live instruments and vocals. I also have 4 years of experience working with live sound on events, including festivals like Glastonbury and Forbidden Fruit.</p>
+                    <p>I am an Irish music producer and score writer based between London and Ireland. I specialize in electronic music production and film scoring, with experience in live sound engineering and studio recording.I am an Irish music producer and score writer based between London and Ireland. I studied music production in Pulse College Dublin, where I had access to the facilities at Windmill Lane Studios. I specialize in electronic music production and film scoring. After leaving college, I have produced multiple electronic tracks and scored a short film called "Mira Talks." Additionally, I am experienced in recording and mixing live instruments and vocals. I also have 4 years of experience working with live sound on events, including festivals like Glastonbury and Forbidden Fruit.</p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="openTab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience', event)">Experience</p>
+                        <p class="tab-links" onclick="openTab('education', event)">Education</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Sound Engineering</span><br>Providing live sound for events</li>
-                            <li><span>DJ</span><br>DJ for house parties and events</li>
-                            <li><span>Music Production</span><br>Creating electronic and acoustic pieces</li>
-                            <li><span>Film Scoring</span><br>Scoring short films and feature films</li>
+                            <li><span>Sound Engineering:</span> Providing live sound for events</li>
+                            <li><span>DJ:</span> DJ for house parties and events</li>
+                            <li><span>Music Production:</span> Creating electronic and acoustic pieces</li>
+                            <li><span>Film Scoring:</span> Scoring short films and feature films</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>2023 - Present</span><br>Freelance Event Worker</li>
-                            <li><span>2022 - 2023</span><br>Sound Engineer at Dobson Sound LTD</li>
-                            <li><span>2018 - 2019</span><br>Sound Engineer at Acoustik</li>
+                            <li><span>2023 - Present:</span> Freelance Event Worker</li>
+                            <li><span>2022 - 2023:</span> Sound Engineer at Dobson Sound LTD</li>
+                            <li><span>2018 - 2019:</span> Sound Engineer at Acoustik</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>2016</span><br>B.A. in Music Production, Griffith College Dublin</li>
+                            <li><span>2016:</span> B.A. in Music Production, Griffith College Dublin</li>
                         </ul>
                     </div>
                 </div>
@@ -123,9 +123,7 @@
                     </div>
                 </div>
                 <div class="work">
-                    <video src="images/MiraTalksCredits.mp4" controls>
-                        Your browser does not support the video tag.
-                    </video>
+                    <video src="images/MiraTalksCredits.mp4" controls></video>
                 </div>
             </div>
             <a href="#" class="btn">See more</a>
@@ -141,65 +139,22 @@
                     <p><i class="fas fa-paper-plane"></i> slyne234@gmail.com</p>
                     <p><i class="fas fa-phone-square-alt"></i> +353879527470</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/stephen.lyne.12/"><i class="fab fa-facebook"></i></a>
-                        <a href="https://twitter.com/slyne234"><i class="fab fa-twitter-square"></i></a>
-                        <a href="https://www.instagram.com/th_ste62/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/stephen-lyne-a07414193/"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
-                    <a href="images/Stephen Lyne's CV.docx" download class="btn btn2">Download CV</a>
+                    <a href="images/StephenLyneCV.docx" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <!--<form id="contactForm" action="https://formspree.io/f/xanyjlye" method="POST">
-                        <input type="text" id="name" name="Name" placeholder="Your Name" required>
-                        <input type="email" id="email" name="Email" placeholder="Your Email" required>
-                        <textarea id="message" name="Message" rows="6" placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span> Message display area  -->
-
-                    <!-- modify this form HTML and place wherever you want your form -->
                     <form id="my-form" action="https://formspree.io/f/xanyjlye" method="POST">
                         <label>Email:</label>
-                        <input type="email" name="email" />
+                        <input type="email" name="email" required />
                         <label>Message:</label>
-                        <input type="text" name="message" />
+                        <textarea name="message" required></textarea>
                         <button id="my-form-button" class="btn btn2">Submit</button>
                         <p id="my-form-status"></p>
                     </form>
-                    
-                    <!-- Place this script at the end of the body tag -->
-                    <script>
-                        var form = document.getElementById("my-form");
-                        
-                        async function handleSubmit(event) {
-                        event.preventDefault();
-                        var status = document.getElementById("my-form-status");
-                        var data = new FormData(event.target);
-                        fetch(event.target.action, {
-                            method: form.method,
-                            body: data,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        }).then(response => {
-                            if (response.ok) {
-                            status.innerHTML = "Thanks for your submission!";
-                            form.reset()
-                            } else {
-                            response.json().then(data => {
-                                if (Object.hasOwn(data, 'errors')) {
-                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                                } else {
-                                status.innerHTML = "Oops! There was a problem submitting your form"
-                                }
-                            })
-                            }
-                        }).catch(error => {
-                            status.innerHTML = "Oops! There was a problem submitting your form"
-                        });
-                        }
-                        form.addEventListener("submit", handleSubmit)
-                    </script>
                 </div>
             </div>
         </div>
@@ -209,52 +164,7 @@
     </div>
 
     <!-- JavaScript Section -->
-    <script>
-        // Handle form submission with fetch API
-        const form = document.getElementById("contactForm");
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-            document.getElementById("msg").textContent = "Sending...";
-
-            fetch(form.action, {
-                method: form.method,
-                body: new FormData(form),
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    document.getElementById("msg").textContent = "Message sent successfully!";
-                } else {
-                    document.getElementById("msg").textContent = "Error: " + (data.error || "Something went wrong.");
-                }
-            })
-            .catch(error => {
-                document.getElementById("msg").textContent = "Error: " + error.message;
-            });
-        });
-
-        // Menu functions
-        function openmenu() {
-            document.getElementById('sidemenu').style.width = '250px';
-        }
-
-        function closemenu() {
-            document.getElementById('sidemenu').style.width = '0';
-        }
-
-        // Tab switching functions
-        function opentab(tabName) {
-            const tabs = document.querySelectorAll(".tab-contents");
-            tabs.forEach(tab => tab.classList.remove("active-tab"));
-
-            const tabLinks = document.querySelectorAll(".tab-links");
-            tabLinks.forEach(link => link.classList.remove("active-link"));
-
-            document.getElementById(tabName).classList.add("active-tab");
-            event.currentTarget.classList.add("active-link");
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
