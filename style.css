@@ -1,399 +1,479 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-html{
-    scroll-behavior: smooth;
-}
-body{
-    background: rgb(255, 183, 218);
-    color:rgb(206, 64, 130);
-}
-#header{
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/glitchforest.jpg);
-    background-size: cover;
-    background-position: right center;
-    background-attachment: fixed;
-}
-.container{
-    padding: 10px 10%;
+/* General Reset and Basic Styling */
+* {
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Poppins', sans-serif; /* Set default font */
+    box-sizing: border-box; /* Ensure padding and border are included in element's dimensions. */
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+html {
+    scroll-behavior: smooth; /*Smooth scrolling between sections improves usability */
 }
 
-.logo{
-    width: 140px;
+/*Set background and text colour*/ 
+body {
+    background: rgb(255, 183, 218); 
+    color: rgb(206, 64, 130); }
+
+/* Set width and height and background of header Section */
+#header {
+    width: 100%; 
+    height: 100vh; 
+    background-image: url(images/glitchforest.jpg); 
+    background-size: cover; 
+    background-position: right center; 
+    background-attachment: fixed; /* Fixed background when scrolling */
 }
 
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+/* Centralize content*/
+.container {
+    padding: 10px 10%; 
 }
 
-nav ul li a{
-    color: rgb(239, 54, 143);
-    text-decoration: none;
-    font-size: 33px;
-    position: relative;
+/* Centralize, space out and wrap items in the navigation bar */
+nav {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap; /* Allows items to easily fit smaller screens */
 }
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #f7cfeb;
+
+.logo {
+    width: 140px; /* Set logo size */
+}
+
+/* Add margin spacing, remove bullets and ensure items appear in a row */
+nav ul li {
+    display: inline-block; 
+    list-style: none; 
+    margin: 10px 20px; 
+}
+
+/* Add colour to nav links, remove underline and create a hover effect*/
+nav ul li a {
+    color: rgb(239, 54, 143); 
+    text-decoration: none; 
+    font-size: 33px; /* Link font size */
+    position: relative; 
+}
+
+nav ul li a::after {
+    content: ''; /* Set underline effect */
+    width: 0; 
+    height: 3px; 
+    background: #f7cfeb; /* Set background color */
     position: absolute;
     left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+    bottom: -6px; /* Sets the space below text */
+    transition: 0.5s; /* Smooth animation between transitions */
 }
-nav ul li a:hover::after{
-    width: 100%;
+
+nav ul li a:hover::after {
+    width: 100%; /* Width of underline */
 }
-.header-text{
-    margin-top: 20%;
-    font-size: 30px;
+
+/* Header Text */
+.header-text {
+    margin-top: 20%; /* Set header text position */
+    font-size: 30px; /* Set base font size */
 }
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
+
+.header-text h1 {
+    font-size: 60px; /* Set heading size */
+    margin-top: 20px; /* Set space above heading */
 }
-.header-text h1 span{
-    color: rgb(239, 54, 143);
+
+.header-text h1 span {
+    color: rgb(239, 54, 143); /* Set header text colour */
 }
-/* -----------about--------------- */
-#about{
-    padding: 80px 0;
-    color: rgba(3, 20, 23, 0.593);
+
+/* About Section */
+#about {
+    padding: 80px 0; /* Set appropriate padding  */
+    color: rgba(3, 20, 23, 0.593); /* Set colour of text */
 }
-.row{
-    display: flex;
+
+/* Adjust alignment and spacing */
+.row {
+    display: flex; 
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Creates an appropriate look on smaller screens  */
 }
 
-.about-col-1{
-    flex-basis: 35%;
-}
-.about-col-1 img{
-    width: 100%;
-    border-radius: 15px;
-    height: auto;
-}
-.about-col-2{
-    flex-basis: 60%;
+.about-col-1 {
+    flex-basis: 35%; /* Take 35% of the row width */
 }
 
-.sub-title{
-    font-size: 60px;
-    font-weight: 600;
-    color: #491111;
+/* Apply rounded corners and positioning settings */
+.about-col-1 img {
+    width: 100%; 
+    border-radius: 15px; 
+    height: auto; 
 }
 
-.tab-titles{
-    display: flex;
+.about-col-2 {
+    flex-basis: 60%; /* Take 60% of the row width */
+}
+
+/* Section Titles */
+
+/* Sets title, font and colouring of title*/
+.sub-title {
+    font-size: 60px; 
+    font-weight: 600; 
+    color: #491111; 
+}
+
+/* Tabs Styling */
+.tab-titles {
+    display: flex; /* Display tabs in a row */
     margin: 20px 0 40px;
 }
-.tab-links{
-    margin-right: 50px;
-    font-size: 18px;
+
+.tab-links {
+    margin-right: 50px; /* Sets appropriate space between tabs */
+    font-size: 18px; 
     font-weight: 500;
-    cursor: pointer;
-    position: relative;
+    cursor: pointer; /* Pointer curser*/
+    position: relative; 
 }
-.tab-links::after{
-    content: '';
+
+.tab-links::after {
+    content: ''; /* Underline effect */
     width: 0;
-    height: 3px;
-    background: #005a61c7;
-    position: absolute;
+    height: 3px; /* Line thickness */
+    background: #005a61c7; 
+    position: absolute; /* Position under text */
     left: 0;
-    bottom: -8px;
-    transition: 0.5s;
+    bottom: -8px; /* Space below text */
+    transition: 0.5s; /* Smooth transition animation */
 }
 
-.tab-links.active-link::after{
-    width: 50%;
+.tab-links.active-link::after {
+    width: 50%; /* Underline expands when active for clear reading */
 }
 
-.tab-contents ul li{
-    list-style: none;
-    margin: 10px 0;
-}
-.tab-contents ul li span{
-    color: #005a61c7;
-    font-size: 14px;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
+.tab-contents ul li {
+    list-style: none; /* Remove bullets */
+    margin: 10px 0; /* Margin creates space between items */
 }
 
-/* ----------------services------------- */
-#services{
-    padding: 30px 0;
+/* Sets font colouring and size  */
+.tab-contents ul li span {
+    color: #005a61c7; 
+    font-size: 14px; 
 }
-.services-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+.tab-contents {
+    display: none; /* Hidden by default */
+}
+
+.tab-contents.active-tab {
+    display: block; /* Show active tab */
+}
+
+/* Services Section */
+#services {
+    padding: 30px 0; 
+}
+
+/* Apply grid layout, Responsive columns and spacing */
+.services-list {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     grid-gap: 40px;
     margin-top: 50px;
 }
-.services-list div{
-    background: #262626;
-    padding: 40px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
+
+.services-list div {
+    background: #262626; 
+    padding: 40px; /* Inner spacing */
+    font-size: 13px; /* Set font size */
+    font-weight: 300; /* Set font weight */
+    border-radius: 10px; 
+    transition: background 0.5s, transform 0.5s; /* Smooth hover effect */
 }
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
+
+.services-list div i {
+    font-size: 50px; 
+    margin-bottom: 30px; 
 }
-.services-list div h2{
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 15px;
+
+/* Adds font styling and spacing */
+.services-list div h2 {
+    font-size: 30px; 
+    font-weight: 500; 
+    margin-bottom: 15px; 
 }
-.services-list div a{
-    text-decoration: none;
-    color: #706464;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
+
+.services-list div a {
+    text-decoration: none; /* Remove underline */
+    color: #706464; 
+    font-size: 12px; 
+    margin-top: 20px; /* Space above link */
+    display: inline-block; /* Inline but allows padding */
 }
-.services-list div:hover{
-    background: #ff004f;
-    transform: translateY(-10px);
+
+.services-list div:hover {
+    background: #ff004f; /* Change background on hover */
+    transform: translateY(-10px); /* Adds a slight lift effect to enhance user feedback*/
 }
-/* -------portfolio----------- */
-#portfolio{
-    padding: 50px 0;
+
+/* Portfolio Section */
+
+#portfolio {
+    padding: 50px 0; /* Vertical spacing */
 }
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+/* Adds a grid layout and spacing */
+.work-list {
+    display: grid; /* Grid layout for portfolio items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns are added to improve readability and usability */
+    grid-gap: 40px; 
+    margin-top: 50px; 
 }
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
+
 .work {
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    height: 300px; 
+    border-radius: 10px; /* Rounded corners to improve aesthetic */
+    position: relative; /* Ensures correct allignment */
+    overflow: hidden; /* Hide overflow, creates a consistently clean design */
+    height: 300px; /* Ensures items height match each other */
 }
 
 .work img {
-    width: 100%;
-    height: 100%; 
-    object-fit: cover; 
-    border-radius: 10px;
-    transition: transform 0.5s;
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; /* Used so that items do not show up squished or stretched */
+    border-radius: 10px; /* Rounded corners for aesthetic reasons */
+    transition: transform 0.5s; /* Smooth scaling results in smoother usability */
 }
 
 .layer {
-    display: flex;
+    display: flex; /* Center content */
     justify-content: center;
-    width: 100%;
-    height: 5%; 
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
-    border-radius: 10px;
-    position: absolute;
+    width: 100%; 
+    height: 5%; /* Small bar initially */
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f); /* Gradient overlay to improve visibiltiy */
+    border-radius: 10px; 
+    position: absolute; /* Allows for appropriate layering */
     left: 0;
     bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 14px;
-    color: #fff; /* Ensure text is visible */
-    transition: height 0.5s ease, opacity 0.5s ease;
-    opacity: 0; /* Initial state should be transparent */
-    z-index: 1; /* Ensures layer stays above the image */
+    opacity: 0; /* Hidden initially */
+    transition: height 0.5s ease, opacity 0.5s ease; /* Smooth hover effects for usability */
+    z-index: 1; /* Controls layering of content as wished  */
 }
 
-/* Modify the hover effect */
+/* Ensure appropriate visibility and therefore clarity */
 .work:hover .layer {
-    height: 110%; /* Expand fully on hover */
-    opacity: 1; /* Make it visible */
-    z-index: 10; /* Place above the image */
+    height: 110%; /* Expand overlay on hover */
+    opacity: 1; /* Show overlay */
+    z-index: 10; /* Ensures visibility */
+}
+/* Buttons */
+
+/* Provides styling of buttons */
+.btn {
+    display: block; /* Center the button */
+    margin: 50px auto; 
+    width: fit-content; /* Button width adapts to size of content for visibility*/
+    border: 1px solid #ff004f; /* Button colour */
+    padding: 14px 50px; /* Set inside padding for the button */
+    border-radius: 6px; /* Creates rounded colour */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Set text colour */
+    transition: background 0.5s; /* Smooth background colour change, avoids an abrupt change */
 }
 
-
-
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-}
-.btn:hover{
-    background: #ff004f;
+.btn:hover {
+    background: #ff004f; /* Set background colour on hover */
 }
 
-/* ---------contact-------- */
-.contact-left{
-    flex-basis: 35%;
+/* Contact Section */
+
+/* Left side takes 35% of the row width, right side takes 60% */
+/* Add spacing above paragraph */
+.contact-left {
+    flex-basis: 35%; 
 }
-.contact-right{
-    flex-basis: 60%;
+
+.contact-right {
+    flex-basis: 60%; 
 }
-.contact-left p{
-    margin-top: 30px;
+
+.contact-left p {
+    margin-top: 30px; 
 }
-.contact-left p i{
+/* Styling added with regards to spacing, colouring and sizing for aesthetic */
+.contact-left p i {
     color: #ff004f;
-    margin-right: 15px;
-    font-size: 25px;
+    margin-right: 15px; 
+    font-size: 25px; 
 }
-.social-icons{
-    margin-top: 30px;
+
+.social-icons {
+    margin-top: 30px; 
 }
-.social-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    color: #ababab;
-    display: inline-block;
-    transition: transform 0.5s;
+
+/* Add styling regarding icon size, spacing, colouring and alignment */
+.social-icons a {
+    text-decoration: none; /* Remove underline from icons */
+    font-size: 30px; 
+    margin-right: 15px; 
+    color: #ababab; 
+    display: inline-block; 
+    transition: transform 0.5s; /* Smooth transition to avoid an abrupt change */
+
+/* Causes an upward movement and colour change on hover. */
+/* This informs the user that these elements are interactive  */
+.social-icons a:hover {
+    color: #ff004f; 
+    transform: translateY(-5px); 
 }
-.social-icons a:hover{
-    color: #ff004f;
-    transform: translateY(-5px);
+
+.btn.btn2 {
+    display: inline-block; /* For smaller screens make button inline so that they flow with the text */
+    background: #ff004f; 
 }
-.btn.btn2{
-    display: inline-block;
-    background: #ff004f;
+
+.contact-right form {
+    width: 100%; 
 }
-.contact-right form{
+
+/* Styling added to remove borders and outline. */
+/* Colouring, font and spacing styling is also added */
+form input,
+form textarea {
     width: 100%;
-}
-form input, form textarea{
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    margin: 15px 0;
-    color: #b6adad;
-    font-size: 18px;
-    border-radius: 6px;
-}
-form .btn2{
-    padding: 14px 60px;
-    font-size: 18px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-.copyright{
-    width: 100%;
-    text-align: center;
-    padding: 25px 0;
-    background: #262626;
-    font-weight: 300;
-    margin-top: 20px;
-}
-.copyright i{
-    color: #ff004f;
-}
-.copyright a{
-    color: #ff004f;
-    text-decoration: none;
-}
-/* -----------------css for small screens--------- */
-nav .fas{
-    display: none;
+    border: 0; 
+    outline: none; 
+    background: #262626; 
+    padding: 15px; 
+    margin: 15px 0; 
+    color: #b6adad; 
+    font-size: 18px; 
+    border-radius: 6px; 
 }
 
-@media only screen and (max-width: 600px){
-    #header{
-        background-image: url(images/glitchforest.jpg);
+
+form .btn2 {
+    padding: 14px 60px; /* Sets appropriate padding */
+    font-size: 18px; /* Set button text size */
+    margin-top: 20px; 
+    cursor: pointer; /* Pointer set to cursor */
+}
+
+/* Footer */
+
+
+.copyright {
+    width: 100%; 
+    text-align: center; /* Centralize text*/
+    padding: 25px 0; /* Vertical padding */
+    background: #262626; 
+    font-weight: 300; 
+    margin-top: 20px; /* Space above footer */
+}
+
+.copyright i {
+    color: #ff004f; 
+}
+
+.copyright a {
+    color: #ff004f; 
+    text-decoration: none; /* Remove underline */
+}
+
+/* Styling for Small Screens */
+nav .fas {
+    display: none; /* Hide menu icon by default */
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(images/glitchforest.jpg); /* Set background for mobile and small screens */
     }
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
+
+    /* Adjust position and font size for smaller screens */
+    .header-text {
+        margin-top: 100%; 
+        font-size: 16px; 
     }
-    .header-text h1{
-        font-size: 30px;
+
+    .header-text h1 {
+        font-size: 30px; /* Heading size */
     }
-    nav .fas{
-        display: block;
-        font-size: 25px;
+
+    nav .fas {
+        display: block; /* Show menu icon on small screens */
+        font-size: 25px; /* Icon size */
     }
-    nav ul{
-        background: #f490af;
-        position: fixed;
+
+    nav ul {
+        background: #f490af; /* Light pink background for menu */
+        position: fixed; /* Fixed position for menu */
         top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
+        right: -200px; /* Hides menu initially */
+        width: 200px; /* Sidebar width */
+        height: 100vh; 
+        padding-top: 50px; 
+        z-index: 2; /* Ensures menu is on top */
+        transition: right 0.5s; /* Smooth slide-in effect */
     }
-    nav ul li{
-        display: block;
-        margin: 25px;
+
+    /* Positioning and spacing styling */
+    nav ul li {
+        display: block; 
+        margin: 25px; 
     }
-    nav ul .fas{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
+
+    /* Set cursor to be a pointer and add spacing */
+    nav ul .fas {
+        position: absolute; /* Position close button */
+        top: 25px; 
+        left: 25px; 
+        cursor: pointer; 
     }
-    .sub-title{
-        font-size: 40px;
+
+    .sub-title {
+        font-size: 40px; /* Tiles font-size */
     }
-    .about-col-1, .about-col-2{
-        flex-basis: 100%;
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%; /* Width for columns adjusted to 100% */
     }
-    .about-col-1{
-        margin-bottom: 30px;
+
+    .about-col-1 {
+        margin-bottom: 30px; /* Set spacing */
     }
-    .about-col-2{
-        font-size: 14px;
+
+    .about-col-2 {
+        font-size: 14px; /* Set a smaller font-size */
     }
-    .tab-links{
-        font-size: 16px;
-        margin-right: 20px;
+
+    /* Spacing and font sizing for tab links */
+    .tab-links {
+        font-size: 16px; 
+        margin-right: 20px; 
     }
-    .contact-left, .contact-right{
-        flex-basis: 100%;
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%; /* Full width columns */
     }
-    .copyright{
-        font-size: 14px;
+
+    .copyright {
+        font-size: 14px; /* Smaller footer text */
     }
 }
-#msg{
-    color: #61b752;
-    margin-top: -40px;
-    display: block;
+
+/* Form Messages */
+#msg {
+    color: #61b752; /* Success message color */
+    margin-top: -40px; 
+    display: block; /* Show message */
 }
+
 #msg.error {
-    color: #ff0000;
+    color: #ff0000; /* Set colour for error message */
+}
 }
